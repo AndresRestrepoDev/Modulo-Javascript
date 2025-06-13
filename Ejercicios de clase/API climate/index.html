@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./Assets/IconClimate.png">
+    <title>Climate</title>
+  </head>
+  <body>
+    <h1 class="tittle-h1">Climate</h1>
+    <main>
+      <section class="card">
+        <h2 class="title-h2">API climate</h2>
+        <p class="paragraph">Do you need to know the weather in a specific city?.   API Climate will give you all the data.</p>
+        <div class="container-items">
+          <label for="City" class="label">Enter city</label>
+          <input type="text" id="city"> <br>
+          <button class="btn" id="buttonEnviar" onclick="getWeather()">Enviar</button>
+        </div>
+        <div id="result"></div>
+        <footer>
+          &copy; Andres Restrepo
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
+<script src="./script.js"></script>
