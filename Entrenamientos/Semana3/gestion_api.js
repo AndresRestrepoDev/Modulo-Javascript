@@ -6,7 +6,7 @@ fetch('http://localhost:3000/productos') //Hace una petición GET a la URL
     .catch( error => console.error( "Error al obtener productos: ", error ) ); //Si ocurre un error lo muestra en la consola.
 
 /* usaremos fetch() con el método POST para agregar un nuevo producto a una base de datos simulada */ 
-const nuevoProducto = { id: 4, nombre: "Monitor", precio: 200 };
+const nuevoProducto = { id: 5, nombre: "Deademas", precio: 13 };
 /* Defino un objeto llamado nuevoProducto que representa un nuevo ítem a guardar en la lista de productos */
 
 fetch('http://localhost:3000/productos', {
@@ -36,9 +36,18 @@ fetch('http://localhost:3000/productos/1', {
 
 
 //  elimina un producto del servidor basándote en su ID
-fetch ('http://localhost:3000/productos/3', {
-    method: DELETE})
+fetch ('http://localhost:3000/productos/4', {     //en una API REST, cada recurso (producto, usuario, etc.) se identifica por una ruta única.
+    method: 'DELETE'})                              //productos → se refiere a todos los productos  ---  /productos/3 → se refiere al producto con ID 3
     .then(() => console.log("Producto eliminado"))
     .catch(error => console.error("Error al eliminar producto:", error));
+
+//La funcion verifica si producto.nombre está vacío, undefined o falso. Verifica si producto.precio no es un número.
+function validarProducto(producto) {
+    if(!producto.nombre || typeof producto.precio != "number") {
+        console.error("Datos del producto no válidos.");
+        return false;
+    }
+    return true;
+}
 
 

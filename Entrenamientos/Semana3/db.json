@@ -1,7 +1,29 @@
 {
-    "productos": [
-        { "id": 1, "nombre": "Laptod", "precio": 1500 },
-        { "id": 2, "nombre": "Mouse", "precio": 25 },
-        { "id": 3, "nombre": "Teclado", "precio": 50 }
-    ]
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Laptop",
+      "precio": 1400
+    },
+    {
+      "id": "2",
+      "nombre": "Mouse",
+      "precio": 25
+    },
+    {
+      "id": "3",
+      "nombre": "Teclado",
+      "precio": "25"
+    },
+    { 
+      "id": 4,
+      "nombre": "Monitor",
+      "precio": 200
+    },
+    {
+      "id": 5,
+      "nombre": "Deademas",
+      "precio": 13
+    }
+  ]
 }
